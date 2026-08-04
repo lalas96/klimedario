@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 80px;
+} 
+@layer base {
+  h2{
+    @apply uppercase
+  }
+  h3{
+    @apply uppercase
+  }
+  h5 {
+    @apply absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black;
+  }
+
+}
+
+@layer components {
+    section{
+    @apply pt-12 pb-12;
+  }
+  .btn {
+    @apply px-10 py-4 my-0 font-bold uppercase text-black bg-white hover:bg-black hover:text-white;
+  }
+  .btn-tab {
+    @apply px-4 py-4 flex gap-2 rounded shadow-xl bg-white w-full;
+  }
+.btn-tab.active {
+  @apply bg-blue text-white;
+}
+
+.btn-tab.active i {
+  @apply text-white;
+}
+.btn-tab:hover i {
+  @apply text-white;
+}
+.btn-tab:hover {
+  @apply bg-blue text-white;
+}
+
+.overlay {
+  @apply absolute inset-0 bg-gradient-to-b from-[rgba(39,46,90,0.6)] to-[rgba(39,46,90,1)];
+  z-index: 0;
+}
+}
+.container{
+  @apply mx-auto max-w-[1200px];
+
+}
+
+.item {
+  @apply relative overflow-hidden md:w-1/4;
+}
+.box{
+  @apply rounded-xl flex flex-col max-w-[600px] gap-2 items-center justify-start text-center p-4;
+}
+.box i, .box h1{
+  @apply flex items-center justify-center
+         w-16 h-16
+         rounded-full bg-grayDark;
+}
+.title{
+  @apply flex gap-2 items-center pb-2 pt-2 font-bold;
+}
+.tab-content{
+  padding: 2rem 1.5rem;
+  gap:1rem;
+  display:flex;
+  flex-direction:column;
+}
+.tab-content ul li{
+  gap:0.5rem;
+  padding-bottom:0.5rem;
+}
+.tab-content i{
+  color:rgb(39, 46, 90);
+}
+
+  .input-field {
+  @apply rounded-xl border-none bg-gray 
+  px-3 py-2 w-full
+  transition-all duration-300
+  focus:outline-none
+  focus:border-dark
+  focus:ring-1
+  focus:ring-dark/30;
+}
+input::placeholder, textarea::placeholder {
+  opacity: 1;
+  color: #232323;
+}
+
+#hero {
+  background-image: url('../images/desktop/header1-1200.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:60%;
+  height:700px;
+}
+#proces {
+  background-image: url('../images/desktop/header1-1200.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:60%;
+  height:100%;
+}
+#contact {
+  background-image: url('../images/desktop/bg2-1750.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:60%;
+  height:800px;
+}
+
+/* @media (max-width: 576px) {
+  #hero {
+    background-image: url('../images/mobile/header1-1200.webp');
+    background-position: center;
+  }
+} */
+.footerBox{
+  padding:1rem;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.accordion-content.open {
+  max-height: 500px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  @apply bg-dark;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
