@@ -23,7 +23,7 @@ section {
 
 @layer components {
     section{
-    @apply pt-12 pb-12;
+    @apply pt-12 pb-12 px-5;
   }
   .btn {
     @apply px-10 py-4 my-0 font-bold uppercase text-black bg-white hover:bg-black hover:text-white;

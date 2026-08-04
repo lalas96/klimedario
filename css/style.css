@@ -542,6 +542,8 @@ h5 {
 }
 
 section {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -957,9 +959,9 @@ section {
   padding: 2rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .px-4 {
@@ -975,6 +977,11 @@ section {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .px-3 {
@@ -1197,7 +1204,7 @@ input::placeholder, textarea::placeholder {
   background-repeat: no-repeat;
   background-size: cover;
   background-position:60%;
-  height:800px;
+  height:700px;
 }
 
 #proces {
